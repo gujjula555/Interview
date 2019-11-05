@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:bind="http://schemas.android.com/apk/res/android">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Name"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/profile"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Name"
+            app:layout_constraintStart_toEndOf="@+id/profile"
+            app:layout_constraintTop_toBottomOf="@id/name"></TextView>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_expand_more_black_24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/post_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="msg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile"></TextView>
+
+        <ImageView
+            android:id="@+id/post_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post_msg"></ImageView>
+
+        <TextView
+            android:textAllCaps="false"
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/likecount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+           android:text="Like"
+            android:textSize="13sp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/post_image"></TextView>
+        <TextView
+            android:textAllCaps="false"
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/share_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="2345 shares"
+            android:textSize="13sp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/post_image"></TextView>
+
+        <TextView
+            android:textAllCaps="false"
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/comment_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="Comment"
+            android:textSize="13sp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintLeft_toRightOf="@+id/likecount"
+            app:layout_constraintRight_toLeftOf="@+id/share_count"
+            app:layout_constraintTop_toBottomOf="@id/post_image"></TextView>
+
+
+
+
+
+        <View
+            android:id="@+id/lineview"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/likecount"></View>
+
+        <Button
+            android:textAllCaps="false"
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:drawableLeft="@drawable/ic_thumb_up_black_24dp"
+            android:text="Like"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lineview"></Button>
+
+        <Button
+            android:textAllCaps="false"
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_share_black_24dp"
+            android:text="share"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lineview"></Button>
+
+        <Button
+            android:textAllCaps="false"
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_sms_black_24dp"
+            android:text="Comment"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintLeft_toRightOf="@+id/like"
+            app:layout_constraintRight_toLeftOf="@+id/share"
+            app:layout_constraintTop_toBottomOf="@id/lineview"></Button>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+</LinearLayout>
+</layout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar_actionbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/colorPrimary"
+    android:gravity="center_vertical"
+    android:contentInsetLeft="0dp"
+    android:contentInsetStart="0dp"
+    app:contentInsetLeft="0dp"
+    app:contentInsetStart="0dp"
+    android:contentInsetRight="0dp"
+    android:contentInsetEnd="0dp"
+    app:contentInsetRight="0dp"
+    app:contentInsetEnd="0dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/profile"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_camera_alt_black_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+        <ImageView
+            android:layout_marginRight="10dp"
+            android:id="@+id/imageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_chat_black_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+        <androidx.appcompat.widget.SearchView
+            android:background="@drawable/search_view_background"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+           app:defaultQueryHint="Search"
+            app:iconifiedByDefault="false"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView"
+            app:layout_constraintStart_toEndOf="@+id/profile"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.appcompat.widget.Toolbar>
